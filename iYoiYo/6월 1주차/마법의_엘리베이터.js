@@ -1,4 +1,4 @@
-// bfs
+// dfs
 function solution(storey) {
   const ans = [];
   
@@ -7,13 +7,15 @@ function solution(storey) {
   function dfs(i, sum, arr) {
       if(arr[i] === 10) {
           const newArr = [...arr];
-          if(i === 0) {
-              newArr.splice(i, 1, 1, 0);
-              i++;
+          // if(i === 0) {
+          //     newArr.splice(i, 1, 1, 0);
+          //     i++;
+          // }
+          if(i === 0) ans.push(sum+1)
+          else {
+              newArr[i-1] += 1;
+              dfs(i-1, sum, newArr);
           }
-          else newArr[i-1] += 1;
-          
-          dfs(i-1, sum, newArr);
           return;
       }
       
