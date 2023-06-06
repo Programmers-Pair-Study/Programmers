@@ -40,7 +40,7 @@ function solution(k, score) {
 // 테스트 25 〉	통과 (18.60ms, 35.9MB)
 // 테스트 26 〉	통과 (0.09ms, 33.5MB)
 
-// 다른 사람의 풀이(reduce, stack 자료구조 활용)
+// 다른 사람의 풀이(reduce, stack 자료구조 활용).
 function solution (k, score){
   const stack = [];
   return score.reduce((a, c) => {
